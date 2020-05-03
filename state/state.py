@@ -1,5 +1,6 @@
 import itertools
 import random
+from os import getrandom
 
 class State:
     '''
@@ -21,7 +22,7 @@ class State:
 
 
     def eval(self, state):
-        print("State primit: ", state)
+        # print("State primit: ", state)
         try:
             links = state.split('-')
         except:
@@ -37,20 +38,23 @@ class State:
 
 
     @staticmethod
-    def get_neighbor(state, no_=1):
+    def get_neighbor(state, seed=1):
         '''
             Because there are no "new" neighbors (all neighbors are already known from the first state)
             We can generate new states and simply compare the path cost
         '''
-
+        random.seed(a=getrandom(5), version=2)
         no_vert = len(state.split('-')) # number of edges
-
-        state_split = state.split('-')
-        pos = random.randint(1, no_vert%13)
+        state_split = tuple(state.split('-'))
+        pos = list()
         n_state = [x for x in state_split]
+
+        while len(pos) < no_vert:
+            pos.append(random.randint(1, no_vert-1 ))
+        pos = list(pos)
         for x in range(1,no_vert):
-            n_state[x], n_state[pos] = n_state[pos], n_state[x]
-            pos = random.randint(1, no_vert % 13)
+            # print("init state: ", state, "neighbor: ", n_state)
+            n_state[x], n_state[pos[x]] = n_state[pos[x]], n_state[x]
 
         return n_state
 
