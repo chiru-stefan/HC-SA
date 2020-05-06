@@ -25,4 +25,26 @@ def ga():
 
 # hc()
 # sa()
-ga()
+
+# from threading import Thread
+#
+# t = []
+# for _ in range(10):
+#     th = Thread(target=ga)
+#     th.run()
+#     t.append(th)
+#
+# for _ in range(10):
+#     t[_].join()
+#
+
+from concurrent.futures import ThreadPoolExecutor
+
+
+
+executor = ThreadPoolExecutor(10)
+future = executor.submit(ga)
+
+
+
+# [ga() for x in range(10)]

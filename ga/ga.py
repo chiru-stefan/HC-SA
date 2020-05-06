@@ -2,6 +2,7 @@ from state import obj
 import random
 from numpy import interp
 import numpy as np
+import time
 '''
 Vertices: from 0-13
 Edges: all edges are connected (Complete Graph): https://mathworld.wolfram.com/CompleteGraph.html
@@ -19,24 +20,25 @@ class Main:
     already_generated   = []
     edges               = dict()
     state               = None
-    MAX_ITER            = 1000
+    MAX_ITER            = 100000
     INIT_POP            = None      # initial population
     # -> list of list of fitness_score and dict [{1:state},{1:state},{0:state}...]
-    min_weight          = 0
-    START_POP_NO        = 4        # initial population will have 10 elements
+    START_POP_NO        = 100        # initial population will have 10 elements
     fitness             = None
     mating_pairs        = None
     offspring           = None
-    mutation            = None
+    START_CLOCK         = None
+
 
     def __init__(self):
         with open("m_burma.csv",'r') as f:
             contents = f.read().split('\n')
             f.close()
+        self.START_CLOCK = time.perf_counter()
 
         for l in contents[1:]:
             self.edges[l.split(',')[0]] = l.split(',')[1]
-        print("Edges: ", self.edges)
+        # print("Edges: ", self.edges)
         self.state = obj(edges=self.edges)
 
 
@@ -58,54 +60,35 @@ class Main:
 
     def crossover(self, pair_1, pair_2):
         offspring = []
-        for i, v in enumerate(pair_1[:-1]):
-            choice_1 = random.randint(1, self.START_POP_NO - 2)  # index 1 , index n-2
-            temp = list(pair_1[i][1]['1'])
-            temp2 = list(pair_1[i+1][1]['1'])
-            child_1 = temp[:choice_1]
-            cpy = list(tuple([x for x in temp2 if x not in child_1]))
-            child_1.extend(cpy)
-            offspring.append(child_1)
+        choice_1 = random.randint(1, self.START_POP_NO - 2)  # index 1 , index n-2
+        temp = list(pair_1[0][1]['1'])
+        temp2 = list(pair_1[1][1]['1'])
+        child_1 = temp[:choice_1]
+        cpy = list(tuple([x for x in temp2 if x not in child_1]))
+        child_1.extend(cpy)
+        offspring.append(child_1)
 
-        for i, v in enumerate(pair_2[:-1]):
-            choice_1 = random.randint(1, self.START_POP_NO - 2)  # index 1 , index n-2
-            temp = list(pair_2[i][1]['1'])
-            temp2 = list(pair_2[i+1][1]['1'])
-            child_1 = temp[:choice_1]
-            cpy = list(tuple([x for x in temp2 if x not in child_1]))
-            child_1.extend(cpy)
-            offspring.append(child_1)
+        child_2 = temp2[:choice_1]
+        cpy = list(tuple([x for x in temp if x not in child_2]))
+        child_2.extend(cpy)
+        offspring.append(child_2)
 
 
-        # print('child1: ', offspring)
-        # choice_1 = random.randint(1, self.START_POP_NO - 2) # index 1 , index n-2
-        # temp = list(pair_1[0][1]['1'])
-        # temp2 = list(pair_1[1][1]['1'])
-        # child_1 = temp[:choice_1]
-        # cpy = list(tuple([x for x in temp2 if x not in child_1]))
-        # child_1.extend(cpy)
-        # print('child1: ', child_1)
-        #
-        # exit(1)
-        #
-        # child_2 = temp2[:choice_1]
-        # cpy = list(tuple([x for x in temp if x not in child_2]))
-        # child_2.extend(cpy)
-        #
-        # choice_1 = random.randint(1, self.START_POP_NO - 2)  # index 1 , index n-2
-        # temp = list(pair_2[0][1]['1'])
-        # temp2 = list(pair_2[1][1]['1'])
-        # child_3 = temp[:choice_1]
-        # cpy = list(tuple([x for x in temp2 if x not in child_3]))
-        # child_3.extend(cpy)
-        #
-        # child_4 = temp2[:choice_1]
-        #
-        # cpy = list(tuple([x for x in temp if x not in child_4]))
-        # child_4.extend(cpy)
+        choice_1 = random.randint(1, self.START_POP_NO - 2)  # index 1 , index n-2
+        temp = list(pair_2[0][1]['1'])
+        temp2 = list(pair_2[1][1]['1'])
+        child_1 = temp[:choice_1]
+        cpy = list(tuple([x for x in temp2 if x not in child_1]))
+        child_1.extend(cpy)
+        offspring.append(child_1)
 
-        # return [child_1, child_2, child_3, child_4]
+        child_2 = temp[:choice_1]
+        cpy = list(tuple([x for x in temp2 if x not in child_2]))
+        child_2.extend(cpy)
+        offspring.append(child_2)
+
         return offspring
+
 
     def mutation(self, children):
         mutated = []
@@ -124,13 +107,17 @@ class Main:
 
 
     def select_best(self, mutated):
-        # print('mutated: ', mutated)
-        # print('fit scores: ', self.fitness)
         mo = np.array(mutated)[np.array(self.fitness).argsort()].tolist()
-        # print(mo)
         tr = [ [x, {'1':tuple(mo[i])}] for i,x in enumerate(self.fitness)]
-        print('tr: ', tr)
-        return tr
+        cpy = list(sorted(self.INIT_POP, key=lambda x: x[0], reverse=True ))
+        for _ in range(len(tr)):
+            # print('removes: ', cpy[_])
+            cpy.remove(cpy[_])
+
+        for i, x in enumerate(tr):
+            cpy.insert(i, x)
+
+        return cpy
 
 
     def driver(self):
@@ -142,10 +129,10 @@ class Main:
 
         # print('sorted: ', np.array(self.INIT_POP)[np.array(weights).argsort()])
 
-        mapping = interp(weights, [-self.f_max, -self.f_min], [.2, .4])   # will be used to select the individual with the best fit
+        mapping = interp(weights, [-self.f_max, -self.f_min], [.1, .9])   # will be used to select the individual with the best fit
         # print('mapping: ', mapping)
 
-        number_of_offspring = self.START_POP_NO
+        number_of_offspring = 2
         for i in range(self.MAX_ITER):
             # select 2 pairs based on the mapping
             # choice_1 = random.choices(range(self.START_POP_NO),mapping)
@@ -162,7 +149,7 @@ class Main:
 
             # crossover
             to_mutation = self.crossover(pair_1, pair_2)
-            # print('crossover: ', to_mutation)
+
             # mutation
             mutated = self.mutation(to_mutation)
             # print('mutated: ', mutated)
@@ -174,4 +161,11 @@ class Main:
                     self.INIT_POP = self.select_best(mutated)           # Current population is the best population
 
 
-        print('Final: ', sum(self.fitness), '\nBest individual: ', min(self.fitness))
+        with open('tests_ga.txt', 'a') as f:
+            f.write(f"\n\nParameters: - Number of vertices: {self.NO_VERTICES}\n"
+                    f"\t- Initial population number: {self.START_POP_NO}\n"
+                    f"\t- Number of iterations: {self.MAX_ITER}"
+                    f"\nFinal population fitness : {sum(self.fitness)}\nBest individual: {np.array(mutated)[np.array(self.fitness).argsort()][0]} ---"
+                    f" {min(self.fitness)}"
+                    f"\nRunning time: {time.perf_counter() - self.START_CLOCK} seconds")
+            f.close()
