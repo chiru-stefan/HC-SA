@@ -20,7 +20,7 @@ class Main:
     already_generated   = []
     edges               = dict()
     state               = None
-    MAX_ITER            = 100000
+    MAX_ITER            = 10000
     INIT_POP            = None      # initial population
     # -> list of list of fitness_score and dict [{1:state},{1:state},{0:state}...]
     START_POP_NO        = 100        # initial population will have 10 elements

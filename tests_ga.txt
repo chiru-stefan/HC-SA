@@ -139,3 +139,360 @@ Parameters: - Number of vertices: 14
 Final population fitness : 123.88
 Best individual: ['0' '1' '3' '4' '5' '6' '8' '9' '12' '7' '2' '11' '13' '10'] --- 30.97
 Running time: 22.344190448000518 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 100000
+Final population fitness : 137.68
+Best individual: ['0' '1' '2' '3' '6' '7' '9' '10' '8' '12' '4' '5' '11' '13'] --- 34.42
+Running time: 22.459690962999957 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 1000
+Final population fitness : 144.13
+Best individual: ['0' '1' '4' '6' '7' '8' '9' '10' '2' '3' '12' '13' '5' '11'] --- 32.470000000000006
+Running time: 2.8064724910000223 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 1000
+Final population fitness : 138.2
+Best individual: ['1' '2' '3' '4' '11' '13' '5' '7' '8' '10' '12' '9' '6' '0'] --- 33.96
+Running time: 3.02364313399994 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 1000
+Final population fitness : 158.89
+Best individual: ['2' '6' '7' '9' '12' '13' '0' '1' '3' '5' '8' '10' '11' '4'] --- 38.720000000000006
+Running time: 3.1093441719986004 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 1000
+Final population fitness : 154.85999999999999
+Best individual: ['0' '2' '4' '8' '6' '11' '12' '1' '3' '7' '10' '13' '9' '5'] --- 37.08
+Running time: 3.152823951000755 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 1000
+Final population fitness : 156.42999999999998
+Best individual: ['4' '5' '6' '7' '8' '10' '11' '12' '13' '1' '2' '0' '3' '9'] --- 36.489999999999995
+Running time: 3.2244304010000633 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 1000
+Final population fitness : 153.6
+Best individual: ['1' '2' '5' '10' '12' '7' '8' '9' '13' '0' '3' '6' '11' '4'] --- 38.31
+Running time: 3.221193174000291 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 1000
+Final population fitness : 152.12
+Best individual: ['0' '1' '2' '3' '5' '6' '7' '9' '10' '13' '4' '8' '11' '12'] --- 37.790000000000006
+Running time: 3.2579378240006918 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 1000
+Final population fitness : 138.82
+Best individual: ['0' '5' '4' '6' '7' '9' '11' '12' '13' '2' '3' '10' '1' '8'] --- 33.18
+Running time: 3.295803042001353 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 1000
+Final population fitness : 150.56
+Best individual: ['1' '3' '5' '6' '7' '9' '10' '12' '13' '2' '4' '8' '0' '11'] --- 37.64
+Running time: 3.416185141999449 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 1000
+Final population fitness : 153.35999999999999
+Best individual: ['0' '1' '2' '3' '4' '8' '9' '10' '12' '5' '6' '7' '11' '13'] --- 38.339999999999996
+Running time: 3.376630388000194 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 1000
+Final population fitness : 139.92
+Best individual: ['1' '2' '6' '7' '9' '0' '8' '10' '12' '3' '5' '13' '11' '4'] --- 34.98
+Running time: 2.527232972001002 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 1000
+Final population fitness : 157.22
+Best individual: ['0' '1' '2' '3' '4' '6' '8' '9' '10' '11' '13' '5' '7' '12'] --- 37.45
+Running time: 3.086168017000091 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 1000
+Final population fitness : 150.05
+Best individual: ['1' '8' '0' '4' '13' '2' '3' '5' '9' '10' '11' '6' '7' '12'] --- 35.21
+Running time: 3.151905213999271 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 1000
+Final population fitness : 157.40999999999997
+Best individual: ['0' '1' '5' '8' '9' '10' '11' '12' '2' '7' '13' '6' '3' '4'] --- 39.32999999999999
+Running time: 3.1504455379999854 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 1000
+Final population fitness : 153.93
+Best individual: ['1' '2' '3' '4' '6' '8' '9' '10' '0' '7' '11' '12' '13' '5'] --- 36.06
+Running time: 3.1852111219996004 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 1000
+Final population fitness : 154.24
+Best individual: ['4' '5' '9' '10' '11' '2' '6' '7' '1' '12' '13' '8' '0' '3'] --- 38.56
+Running time: 3.2169048879986804 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 1000
+Final population fitness : 157.45
+Best individual: ['4' '1' '2' '0' '9' '11' '3' '5' '6' '7' '8' '12' '10' '13'] --- 38.19
+Running time: 3.183079999000256 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 1000
+Final population fitness : 141.18
+Best individual: ['0' '1' '2' '3' '4' '5' '9' '11' '13' '6' '10' '12' '8' '7'] --- 34.87
+Running time: 3.257029121999949 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 1000
+Final population fitness : 152.36
+Best individual: ['3' '4' '5' '7' '8' '9' '10' '12' '11' '13' '6' '0' '1' '2'] --- 37.21
+Running time: 3.2455067120008607 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 1000
+Final population fitness : 146.43
+Best individual: ['4' '5' '6' '8' '9' '1' '2' '3' '7' '10' '11' '13' '0' '12'] --- 34.88999999999999
+Running time: 3.2878935049993743 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 149.6
+Best individual: ['0' '1' '4' '5' '6' '7' '8' '12' '2' '3' '9' '10' '13' '11'] --- 37.4
+Running time: 29.394327505000547 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 145.64
+Best individual: ['1' '4' '6' '7' '8' '9' '10' '11' '0' '2' '3' '5' '12' '13'] --- 35.85
+Running time: 29.67761412099935 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 127.77
+Best individual: ['1' '7' '8' '9' '10' '0' '2' '3' '4' '5' '11' '12' '13' '6'] --- 31.330000000000002
+Running time: 30.532225139999355 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 144.17999999999998
+Best individual: ['0' '1' '2' '4' '5' '6' '7' '8' '10' '12' '13' '3' '11' '9'] --- 35.23
+Running time: 30.562456427000143 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 144.6
+Best individual: ['0' '1' '8' '10' '12' '13' '2' '3' '5' '6' '4' '11' '7' '9'] --- 36.15
+Running time: 30.692033736000667 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 137.20000000000002
+Best individual: ['0' '1' '2' '3' '4' '5' '11' '13' '7' '8' '10' '12' '6' '9'] --- 34.300000000000004
+Running time: 30.880969439000182 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 140.76
+Best individual: ['0' '1' '9' '11' '13' '2' '3' '4' '5' '7' '8' '12' '10' '6'] --- 35.16
+Running time: 31.008244775001003 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 125.2
+Best individual: ['0' '1' '2' '3' '4' '5' '6' '13' '11' '12' '7' '10' '9' '8'] --- 31.3
+Running time: 31.429551106999497 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 141.51999999999998
+Best individual: ['0' '3' '5' '6' '1' '2' '8' '10' '11' '4' '13' '12' '7' '9'] --- 35.379999999999995
+Running time: 31.467138669000633 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 150.07999999999998
+Best individual: ['0' '1' '2' '3' '4' '5' '8' '9' '7' '10' '11' '6' '12' '13'] --- 36.209999999999994
+Running time: 31.512548685999718 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 140.77
+Best individual: ['0' '1' '2' '3' '4' '5' '6' '7' '8' '9' '10' '12' '13' '11'] --- 35.18
+Running time: 28.33472405700013 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 127.42000000000002
+Best individual: ['4' '5' '6' '10' '9' '12' '13' '0' '1' '3' '7' '8' '11' '2'] --- 31.790000000000003
+Running time: 28.35355561200049 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 145.78000000000003
+Best individual: ['2' '3' '4' '5' '7' '0' '1' '6' '12' '8' '9' '10' '11' '13'] --- 36.35000000000001
+Running time: 28.918857483000465 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 131.0
+Best individual: ['0' '2' '3' '4' '5' '8' '9' '12' '6' '11' '13' '7' '10' '1'] --- 32.75
+Running time: 28.981295167999633 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 145.04
+Best individual: ['0' '1' '2' '5' '13' '4' '6' '8' '10' '12' '7' '11' '3' '9'] --- 35.03
+Running time: 29.523421864998454 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 119.96000000000001
+Best individual: ['0' '1' '2' '3' '4' '5' '6' '8' '10' '9' '11' '12' '13' '7'] --- 29.990000000000002
+Running time: 30.098960668001382 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 140.72
+Best individual: ['4' '7' '8' '9' '10' '12' '0' '1' '2' '3' '11' '5' '13' '6'] --- 35.18
+Running time: 30.293179871001485 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 122.56000000000002
+Best individual: ['0' '1' '7' '8' '9' '10' '12' '2' '3' '4' '5' '11' '13' '6'] --- 30.640000000000004
+Running time: 30.38558587999978 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 146.15999999999997
+Best individual: ['0' '1' '2' '7' '8' '9' '10' '3' '4' '5' '11' '12' '13' '6'] --- 36.53999999999999
+Running time: 30.6386126769994 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 141.0
+Best individual: ['2' '4' '5' '6' '7' '8' '9' '10' '12' '1' '11' '13' '0' '3'] --- 35.25
+Running time: 30.73858582399953 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 135.89000000000001
+Best individual: ['0' '2' '3' '5' '7' '8' '9' '10' '12' '13' '1' '6' '4' '11'] --- 33.03
+Running time: 26.819513432999884 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 132.48
+Best individual: ['1' '2' '4' '6' '9' '11' '12' '13' '3' '5' '7' '8' '10' '0'] --- 33.12
+Running time: 28.66854823000176 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 140.72
+Best individual: ['0' '1' '2' '3' '4' '5' '6' '7' '8' '9' '10' '12' '11' '13'] --- 35.18
+Running time: 28.7484836120002 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 152.04000000000002
+Best individual: ['1' '2' '3' '6' '8' '9' '10' '0' '5' '11' '12' '13' '7' '4'] --- 38.010000000000005
+Running time: 30.039201032001074 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 123.52
+Best individual: ['0' '1' '2' '4' '5' '6' '9' '10' '11' '12' '13' '3' '7' '8'] --- 30.88
+Running time: 30.139793300999372 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 141.08
+Best individual: ['0' '1' '2' '3' '4' '5' '11' '12' '6' '7' '9' '10' '8' '13'] --- 35.27
+Running time: 30.255844737001098 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 137.04
+Best individual: ['0' '3' '6' '8' '10' '11' '12' '4' '5' '13' '2' '7' '9' '1'] --- 34.26
+Running time: 30.87750285200127 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 144.61999999999998
+Best individual: ['0' '1' '2' '3' '4' '8' '9' '10' '11' '12' '13' '5' '6' '7'] --- 34.669999999999995
+Running time: 31.142384834998666 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 135.23999999999998
+Best individual: ['0' '1' '2' '3' '7' '8' '9' '10' '12' '6' '11' '13' '5' '4'] --- 33.809999999999995
+Running time: 31.215183301999787 seconds
+
+Parameters: - Number of vertices: 14
+	- Initial population number: 100
+	- Number of iterations: 10000
+Final population fitness : 147.47
+Best individual: ['3' '4' '5' '6' '7' '8' '9' '10' '0' '1' '2' '11' '12' '13'] --- 35.39
+Running time: 31.22773563299961 seconds
