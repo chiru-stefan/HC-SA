@@ -26,7 +26,7 @@ class State:
         try:
             links = state.split('-')
         except:
-            links = state
+            links = state if type(state) == list else list(state)
         s_weights = .0
         for i, x in enumerate(links[:-1]):
             try:
@@ -39,10 +39,6 @@ class State:
 
     @staticmethod
     def get_neighbor(state, seed=1):
-        '''
-            Because there are no "new" neighbors (all neighbors are already known from the first state)
-            We can generate new states and simply compare the path cost
-        '''
         random.seed(a=getrandom(5), version=2)
         no_vert = len(state.split('-')) # number of edges
         state_split = tuple(state.split('-'))
@@ -58,3 +54,15 @@ class State:
 
         return n_state
 
+
+    @staticmethod
+    def fitness_function(population, edges):
+        fitness_score = []
+
+        state = State(edges=edges)
+
+        for p in population:
+            fitness_score.append(state.eval(p))
+
+        # print('fitness score for population: ', population, ' \n-> ', sum(fitness_score))
+        return fitness_score
